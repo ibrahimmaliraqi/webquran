@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <link rel="icon" href="images/one.jpg" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تدبر القرآن الكريم</title>
+    <link rel="stylesheet" href="tadabor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>تدبر القرآن الكريم</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+
+                <li><a href="quran.html"><i class="fas fa-book-quran"></i> القرآن الكريم</a></li>
+                <li><a href="live.html"><i class="fas fa-broadcast-tower"></i> البث القرآني</a></li>
+                <li><a href="tasbih.html"><i class="fas fa-prayer-beads"></i> المسبحة</a></li>
+                <li><a href="adhkar.html"><i class="fas fa-book"></i> الأذكار</a></li>
+                <li><a href="tadabor.html" class="active"><i class="fas fa-pen-fancy"></i> التدبر</a></li>
+                <li><a href="basamat.html"><i class="fas fa-hands-holding"></i> اترك اثرك</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>تدبر آيات القرآن الكريم</h2>
+                <p>تأملات وتدبر في آيات الله</p>
+            </div>
+        </section>
+
+        <div id="tadabor-content" class="tadabor-content"></div>
+    </main>
+
+    <!-- Modal for video -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <iframe id="videoFrame" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>جميع الحقوق محفوظة لدى ابراهيم محمد &copy; 2025</p>
+
+        </div>
+    </footer>
+
+    <script src="tadabor.js"></script>
+</body>
+
+</html>
