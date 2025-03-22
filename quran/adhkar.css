@@ -1,0 +1,282 @@
+.adhkar-section {
+    padding: 2rem 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+    min-height: calc(100vh - 120px);
+}
+
+.category-selector {
+    margin-bottom: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.adhkar-select {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 15px;
+    border: 2px solid #e0e5ec;
+    background-color: #fff;
+    min-width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.adhkar-select:hover {
+    border-color: #4a90e2;
+}
+
+.adhkar-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.dhikr-card {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    border: 1px solid rgba(74, 144, 226, 0.1);
+}
+
+.dhikr-card:hover:not(.completed) {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.dhikr-content {
+    font-size: 1.3rem;
+    line-height: 2;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.dhikr-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(74, 144, 226, 0.1);
+}
+
+/* هنا */
+.dhikr-count {
+    background: linear-gradient(135deg, #1f8f4e 0%, #27ae60 100%);
+
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    color: #fff;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.2);
+}
+
+.dhikr-description {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.dhikr-reference {
+    color: #4a90e2;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* أنماط زر التقدم */
+.dhikr-progress-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #1f8f4e 0%, #27ae60 100%);
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.dhikr-progress-btn:hover:not(.completed) {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.3);
+}
+
+.dhikr-progress-btn:active:not(.completed) {
+    transform: translateY(0);
+}
+
+/* أنماط البطاقة المكتملة */
+.dhikr-card.completed {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: 2px solid #27ae60;
+    opacity: 0.85;
+}
+
+.dhikr-card.completed .dhikr-content {
+    color: #495057;
+}
+
+.dhikr-card.completed .dhikr-progress-btn {
+    background: linear-gradient(135deg, #27ae60 0%, #1e8449 100%);
+    pointer-events: none;
+}
+
+.completion-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #27ae60;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+    z-index: 2;
+    animation: popIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* أنماط مؤشر التقدم */
+.category-progress {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e0e5ec;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+    width: 0;
+    transition: width 0.5s ease;
+    border-radius: 4px;
+}
+
+.progress-fill.completed {
+    background: linear-gradient(135deg, #27ae60 0%, #1e8449 100%);
+}
+
+.progress-text {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* أنماط زر إعادة التعيين */
+.reset-progress-btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 15px;
+    border: 2px solid #e74c3c;
+    background-color: #fff;
+    color: #e74c3c;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.1);
+}
+
+.reset-progress-btn:hover {
+    background-color: #e74c3c;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.reset-progress-btn:active {
+    transform: translateY(0);
+}
+
+/* رسالة الإكمال */
+.completion-message {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #27ae60;
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.2);
+    animation: popIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* الرسائل */
+.error-message {
+    text-align: center;
+    color: #dc3545;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 1rem auto;
+    max-width: 600px;
+}
+
+/* التحريكات */
+@keyframes popIn {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* تخطيط الجوال */
+@media (max-width: 768px) {
+    .adhkar-container {
+        padding: 0 1rem;
+    }
+
+    .dhikr-info {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .dhikr-content {
+        font-size: 1.2rem;
+    }
+
+    .category-selector {
+        flex-direction: column;
+    }
+
+    .reset-progress-btn {
+        margin-top: 1rem;
+    }
+}
